@@ -9,12 +9,12 @@
   "author": "CaioFragoso23",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^24.3.1",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2"
   },
   "dependencies": {
     "@types/express": "^5.0.3",
-    "@types/node": "^24.3.1",
     "express": "^5.1.0"
   }
 }
