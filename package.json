@@ -11,5 +11,9 @@
   "devDependencies": {
     "tsx": "^4.20.5",
     "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "express": "^5.1.0"
   }
 }
