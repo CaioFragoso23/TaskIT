@@ -7,7 +7,7 @@ export default class Task{
   private id:number;
   private title:string;
   private description:string;
-  public status: IStatus;
+  private status: IStatus;
 
   constructor(id : number, status : IStatus, title : string, description : string){
     this.id = id;
@@ -16,29 +16,29 @@ export default class Task{
     this.description = description;
   }
 
-  get_id(){
+  public get_id(){
     return this.id;
   }
 
-  get_status( ){
+  public get_status( ){
     return this.status;
   }
 
-  get_title( ){
+  public get_title( ){
     return this.title;
   }
 
-  get_description(){
+  public get_description(){
     return this.description
   }
 
-  set_status( status : IStatus ){
+  public set_status( status : IStatus ){
     this.status = status;
   }
-  set_title( title : string ){
+  public set_title( title : string ){
     this.title = title;
   }
-  set_description( description : string ){
+  public set_description( description : string ){
     this.description = description;
   }
 
