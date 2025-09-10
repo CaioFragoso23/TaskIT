@@ -2,11 +2,11 @@ interface IStatus{
   status: `pending` | `in_progress` | `completed`;
 }
 
-class Task{
+export default class Task{
 
-  public id:number;
-  public title:string;
-  public description:string;
+  private id:number;
+  private title:string;
+  private description:string;
   public status: IStatus;
 
   constructor(id : number, status : IStatus, title : string, description : string){
@@ -15,4 +15,21 @@ class Task{
     this.title = title;
     this.description = description;
   }
+
+  get_id(){
+    return this.id;
+  }
+
+  get_status( ){
+    return this.status;
+  }
+
+  get_title( ){
+    return this.title;
+  }
+
+  get_description(){
+    return this.description
+  }
+
 }
