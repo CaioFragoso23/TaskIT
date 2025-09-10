@@ -4,7 +4,8 @@
   "description": "To-Do List Using POO, Repository Pattern and API logic",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "dev": "node ./src/app.ts"
   },
   "author": "CaioFragoso23",
   "license": "ISC",
