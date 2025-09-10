@@ -32,4 +32,14 @@ export default class Task{
     return this.description
   }
 
+  set_status( status : IStatus ){
+    this.status = status;
+  }
+  set_title( title : string ){
+    this.title = title;
+  }
+  set_description( description : string ){
+    this.description = description;
+  }
+
 }

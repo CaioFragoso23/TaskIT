@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "To-Do List Using POO, Repository Pattern and API logic",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "test",
     "dev": "node ./src/app.ts"
