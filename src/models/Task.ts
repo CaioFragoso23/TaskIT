@@ -1,4 +1,4 @@
-interface IStatus{
+export interface IStatus{
   status: `pending` | `in_progress` | `completed`;
 }
 
