@@ -1,5 +1,5 @@
-import Task, { type IStatus } from "../models/Task.js";
-import { TaskRepository } from "../repositories/TaskRepository.js";
+import Task, { type IStatus } from "../models/Task.ts";
+import { TaskRepository } from "../repositories/TaskRepository.ts";
 
 interface ITaskController {
   createTask(title: string, status: IStatus, description: string): Task;
