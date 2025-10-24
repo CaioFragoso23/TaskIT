@@ -1,6 +1,6 @@
 import Task, { type IStatus } from "../models/Task.ts";
 import { TaskRepository } from "../repositories/TaskRepository.ts";
-
+import { TaskService } from "../services/task.service.ts";
 interface ITaskController {
   createTask(title: string, status: IStatus, description: string): Task;
   listTask(): Task[];
@@ -11,9 +11,13 @@ interface ITaskController {
 export class TaskController implements ITaskController {
   //Lógica de criação de Task
   createTask(title: string, status: IStatus, description: string): Task {
+    //Criação de um novo id para a Task
+    const taskService = new TaskService();
+    let newId = taskService.create_id();
+    
     //Cria uma nova Task com dados recebidos do usuário
     let task = new Task({
-      id: 0,
+      id: newId,
       status: status,
       title: title,
       description: description,
