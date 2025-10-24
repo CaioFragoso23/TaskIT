@@ -10,14 +10,13 @@ export interface ITask {
 }
 
 export default class Task {
-
-  private id: number;
+  private id: number | undefined;
   private title: string;
   private description: string;
   private status: IStatus;
 
-  constructor({ status, title, description }: ITask) {
-    this.id = 1;
+  constructor({ id, status, title, description }: ITask) {
+    this.id = id;
     this.status = status;
     this.title = title;
     this.description = description;

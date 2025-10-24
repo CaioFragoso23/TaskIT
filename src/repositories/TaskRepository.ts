@@ -48,15 +48,17 @@ export class TaskRepository implements ITaskRepository {
   }
 
   // Método de pegar dados de uma única task
-  getTaskById(id: number): Task | undefined {
+  getTaskById(id: number | undefined): Task | undefined {
     //Procura task em que o id seja igual ao id oferecido por um outro objeto.
-    const taskFound = tasks.find((task) => (id = task.get_id()));
-    //Retorna Task encontrada
-    return taskFound;
+    if (typeof id == "number") {
+      const taskFound = tasks.find((task) => (id = task.get_id()));
+      //Retorna Task encontrada
+      return taskFound;
+    }
   }
 
   // Método de deleção de Tasks
-  deleteTask(id: number): undefined {
+  deleteTask(id: number | undefined): undefined {
     console.group("Delete");
     console.log(tasks.length);
     //Realiza um Splice,

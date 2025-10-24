@@ -38,4 +38,6 @@ export class TaskService {
     //Define status como 'pending'
     task?.set_status(pendingStatus);
   }
+
+  
 }
